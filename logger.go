@@ -25,23 +25,23 @@ type Logger struct {
 
 var LogLevel = ""
 
-func (l *Logger) Fatal(v ...interface{}) {
+func (l Logger) Fatal(v ...interface{}) {
 	l.logMessages(FATAL, v...)
 }
 
-func (l *Logger) Error(v ...interface{}) {
+func (l Logger) Error(v ...interface{}) {
 	l.logMessages(ERROR, v...)
 }
 
-func (l *Logger) Warn(v ...interface{}) {
+func (l Logger) Warn(v ...interface{}) {
 	l.logMessages(WARN, v...)
 }
 
-func (l *Logger) Debug(v ...interface{}) {
+func (l Logger) Debug(v ...interface{}) {
 	l.logMessages(DEBUG, v...)
 }
 
-func (l *Logger) Info(v ...interface{}) {
+func (l Logger) Info(v ...interface{}) {
 	l.logMessages(INFO, v...)
 }
 
